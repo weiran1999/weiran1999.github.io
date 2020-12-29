@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="深度学习, WeiRan">
+    <meta name="keywords" content="建模论文, WeiRan">
     <meta name="description" content="技术 分享 心声">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>深度学习 | WeiRan</title>
+    <title>建模论文 | WeiRan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -127,17 +127,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -230,17 +219,6 @@
           
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
         
         <li><div class="divider"></div></li>
         <li>
@@ -320,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">深度学习</h1>
+                    <h1 class="description center-align post-title">建模论文</h1>
                 </div>
             </div>
         </div>
@@ -450,6 +428,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%80%BB%E7%BB%93%E5%BD%92%E7%BA%B3/" class="post-category">
+                                总结归纳
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -457,14 +444,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-25
+                    2020-10-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-15
+                    2020-12-29
                 </div>
                 
 
@@ -488,47 +475,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="深度学习笔记"><a href="#深度学习笔记" class="headerlink" title="深度学习笔记"></a>深度学习笔记</h1><p>内容来自《动手学深度学习》(<a target="_blank" rel="noopener" href="https://tangshusen.me/Dive-into-DL-PyTorch/#/">https://tangshusen.me/Dive-into-DL-PyTorch/#/</a>)</p>
-<h2 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h2><p>首先是人工智能，机器学习，神经网络，与深度学习之间的关系：</p>
-<p><img src="%E5%9B%BE/Al%E4%B8%AD%E7%9A%84%E5%9B%9B%E4%B8%AA%E9%9B%86%E5%90%88%E8%8C%83%E5%9B%B4.jpg"></p>
-<p>人工智能里面，分机器学习，和非机器学习。<br>非机器学习大概就是，人教机器学，数据和资源有限，无法处理大规模复杂的状况。</p>
-<p>机器学习的特点就是将大量数据交给机器，让机器学到其中规律。机器学习有多个流派，其中最火的就是神经网络流派。</p>
-<h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>人学习知识是通过神经元的连接，科学家通过模仿人脑机理发明了人工神经元。技术的进一步发展，多层神经元的连接，就形成了神经网络。</p>
-<p>神经元是构建神经网络的最基本单位，下图就是人工神经元的原理图。一个神经元由一个加法器和一个门限器组成。</p>
-<p><img src="%E5%9B%BE/%E7%A5%9E%E7%BB%8F%E5%85%83.jpg"></p>
-<p>其中原理是：加法器有一些输入，代表从其他神经元来的信号，这些信号分别被乘上一个系数后在加法器里相加，输入门限器，如果大于某个值，则“激活”这个神经元，连接到下一个神经元，否则就不激活。</p>
-<p>原理就是如此，输入信号乘上的系数，我们也叫「权重」，就是网络的参数，玩神经网路就是调整权重，让它做你想让它做的事。</p>
-<p>一个神经元只能识别一个东西，比如，当你训练给感知器会「认」数字「8」，你给它看任何一个东西，它都只会告诉你是否是“8”.</p>
-<p>为了让机器识别更多更复杂的图像，我们就需要用更多的神经元。人的大脑由 1000 亿个神经元构成，人脑神经元组成了一个很复杂的三维立体结构， 这么复杂的连接在芯片上做不出来。所以只能简化， 三维太复杂，我们就只能两维，神经元不能到处去连接，我们把它们分层，只允许每一层的神经元连接下一层的。</p>
-<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><p>机器学习是一种实现人工智能的方法，深度学习是一种实现机器学习的技术。</p>
-<p>最初的深度学习是利用深度神经网络来解决特征表达的一种学习过程。深度神经网络本身并不是一个全新的概念，可大致理解为包含多个隐含层的神经网络结构。为了提高深层神经网络的训练效果，人们对神经元的连接方法和激活函数等方面做出相应的调整。其实有不少想法早年间也曾有过，但由于当时训练数据量不足、计算能力落后，因此最终的效果不尽如人意。如今却是大有不同。</p>
-<p>深度学习摧枯拉朽般地实现了各种任务，使得似乎所有的机器辅助功能都变为可能。无人驾驶汽车，预防性医疗保健，甚至是更好的电影推荐，都近在眼前，或者即将实现。</p>
-<p>目前，业界有一种错误的较为普遍的意识，即“深度学习最终可能会淘汰掉其他所有机器学习算法”。这种意识的产生主要是因为，当下深度学习在计算机视觉、自然语言处理领域的应用远超过传统的机器学习方法，并且媒体对深度学习进行了大肆夸大的报道。</p>
-<p>深度学习，作为目前最热的机器学习方法，但并不意味着是机器学习的终点。起码目前存在以下问题：</p>
-<p>1： 深度学习模型需要大量的训练数据，才能展现出神奇的效果，但现实生活中往往会遇到小样本问题，此时深度学习方法无法入手，传统的机器学习方法就可以处理；</p>
-<p>2： 有些领域，采用传统的简单的机器学习方法，可以很好地解决了，没必要非得用复杂的深度学习方法；</p>
-<p>3：深度学习的思想，来源于人脑的启发，但绝不是人脑的模拟，举个例子，给一个三四岁的小孩看一辆自行车之后，再见到哪怕外观完全不同的自行车，小孩也十有八九能做出那是一辆自行车的判断，也就是说，人类的学习过程往往不需要大规模的训练数据，而现在的深度学习方法显然不是对人脑的模拟。</p>
-<p>深度学习，得失各异。</p>
-<h1 id="pytorch"><a href="#pytorch" class="headerlink" title="pytorch"></a>pytorch</h1><p>介绍一些术语及函数。</p>
-<h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><p>为了简单起见，这里我们假设价格只取决于房屋状况的两个因素，即面积（平方米）和房龄（年）。<br>接下来我们希望探索价格与这两个因素的具体关系。线性回归假设输出与各个输入之间是线性关系:<br><img src="%E5%9B%BE/%E7%BA%BF%E6%80%A7%E5%85%B3%E7%B3%BB.svg"></p>
-<h3 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h3><p>我们通常收集一系列的真实数据，例如多栋房屋的真实售出价格和它们对应的面积和房龄。<br>我们希望在这个数据上面寻找模型参数来使模型的预测价格与真实价格的误差最小。<br>在机器学习术语里，该数据集被称为训练数据集（training data set）或训练集（training set），<br>一栋房屋被称为一个样本（sample），其真实售出价格叫作标签（label）<br>，用来预测标签的两个因素叫作特征（feature）。特征用来表征样本的特点。</p>
-<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>在模型训练中，我们需要衡量价格预测值与真实值之间的误差。通常我们会选取一个非负数作为误差，且数值越小表示误差越小。<br><img src="%E5%9B%BE/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B01.svg"><br><img src="%E5%9B%BE/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B02.svg"></p>
-<h3 id="优化函数-随机梯度下降"><a href="#优化函数-随机梯度下降" class="headerlink" title="优化函数 - 随机梯度下降"></a>优化函数 - 随机梯度下降</h3><p>当模型和损失函数形式较为简单时，上面的误差最小化问题的解可以直接用公式表达出来。这类解叫作解析解（analytical solution）。本节使用的线性回归和平方误差刚好属于这个范畴。然而，大多数深度学习模型并没有解析解，只能通过优化算法有限次迭代模型参数来尽可能降低损失函数的值。这类解叫作数值解（numerical solution）。</p>
-<p>在求数值解的优化算法中，小批量随机梯度下降（mini-batch stochastic gradient descent）在深度学习中被广泛使用。它的算法很简单：先选取一组模型参数的初始值，如随机选取；接下来对参数进行多次迭代，使每次迭代都可能降低损失函数的值。在每次迭代中，先随机均匀采样一个由固定数目训练数据样本所组成的小批量（mini-batch），然后求小批量中数据样本的平均损失有关模型参数的导数（梯度），最后用此结果与预先设定的一个正数的乘积作为模型参数在本次迭代的减小量。</p>
-<p>学习率n: 代表在每次优化中，能够学习的步长的大小。</p>
-<p>批量大小ß: 是小批量计算中的批量大小batch size</p>
-<p>总结一下，优化函数的有以下两个步骤：</p>
-<p>(i)初始化模型参数，一般来说使用随机初始化；<br>(ii)我们在数据上迭代多次，通过在负梯度方向移动参数来更新每个参数。</p>
-<p><img src="%E5%9B%BE/%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6.svg"></p>
-<h3 id="矢量计算"><a href="#矢量计算" class="headerlink" title="矢量计算"></a>矢量计算</h3><p>在模型训练或预测时，我们常常会同时处理多个数据样本并用到矢量计算。在介绍线性回归的矢量计算表达式之前，让我们先考虑对两个向量相加的两种方法。<br>向量相加的一种方法是，将这两个向量按元素逐一做标量加法。<br>向量相加的另一种方法是，将这两个向量直接做矢量加法。<br>事实上，直接的矢量加法会快的多。所以我们更多采用矢量计算。</p>
-<h2 id="术语简介"><a href="#术语简介" class="headerlink" title="术语简介"></a>术语简介</h2><p>此中深度学习的水太深了，只能挑出一些关键术语，加以理解。</p>
-<h3 id="softmax回归"><a href="#softmax回归" class="headerlink" title="softmax回归"></a>softmax回归</h3><h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><h3 id="模型选择，过拟和-amp-欠拟和"><a href="#模型选择，过拟和-amp-欠拟和" class="headerlink" title="模型选择，过拟和&amp;欠拟和"></a>模型选择，过拟和&amp;欠拟和</h3><p>我们将探究模型训练中经常出现的两类典型问题：一类是模型无法得到较低的训练误差，我们将这一现象称作欠拟合（underfitting）；另一类是模型的训练误差远小于它在测试数据集上的误差，我们称该现象为过拟合（overfitting）。在实践中，我们要尽可能同时应对欠拟合和过拟合。虽然有很多因素可能导致这两种拟合问题，在这里我们重点讨论两个因素：模型复杂度和训练数据集大小。</p>
-<h3 id="泛化误差-amp-训练误差"><a href="#泛化误差-amp-训练误差" class="headerlink" title="泛化误差&amp;训练误差"></a>泛化误差&amp;训练误差</h3><p>在解释上述现象之前，我们需要区分训练误差（training error）和泛化误差（generalization error）。通俗来讲，前者指模型在训练数据集上表现出的误差，后者指模型在任意一个测试数据样本上表现出的误差的期望，并常常通过测试数据集上的误差来近似。计算训练误差和泛化误差可以使用之前介绍过的损失函数，例如线性回归用到的平方损失函数和softmax回归用到的交叉熵损失函数。</p>
-<p>让我们以高考为例来直观地解释训练误差和泛化误差这两个概念。训练误差可以认为是做往年高考试题（训练题）时的错误率，泛化误差则可以通过真正参加高考（测试题）时的答题错误率来近似。假设训练题和测试题都随机采样于一个未知的依照相同考纲的巨大试题库。如果让一名未学习中学知识的小学生去答题，那么测试题和训练题的答题错误率可能很相近。但如果换成一名反复练习训练题的高三备考生答题，即使在训练题上做到了错误率为0，也不代表真实的高考成绩会如此。</p>
-<p>在机器学习里，我们通常假设训练数据集（训练题）和测试数据集（测试题）里的每一个样本都是从同一个概率分布中相互独立地生成的。基于该独立同分布假设，给定任意一个机器学习模型（含参数），它的训练误差的期望和泛化误差都是一样的。例如，如果我们将模型参数设成随机值（小学生），那么训练误差和泛化误差会非常相近。但我们从前面几节中已经了解到，模型的参数是通过在训练数据集上训练模型而学习出的，参数的选择依据了最小化训练误差（高三备考生）。所以，训练误差的期望小于或等于泛化误差。也就是说，一般情况下，由训练数据集学到的模型参数会使模型在训练数据集上的表现优于或等于在测试数据集上的表现。由于无法从训练误差估计泛化误差，一味地降低训练误差并不意味着泛化误差一定会降低。</p>
-<p>机器学习模型应关注降低泛化误差。</p>
-<h3 id="权重衰减"><a href="#权重衰减" class="headerlink" title="权重衰减"></a>权重衰减</h3><h3 id="丢弃法"><a href="#丢弃法" class="headerlink" title="丢弃法"></a>丢弃法</h3><h3 id="正向，反向传播和计算图"><a href="#正向，反向传播和计算图" class="headerlink" title="正向，反向传播和计算图"></a>正向，反向传播和计算图</h3><h3 id="深度学习计算"><a href="#深度学习计算" class="headerlink" title="深度学习计算"></a>深度学习计算</h3><h3 id="构造模型"><a href="#构造模型" class="headerlink" title="构造模型"></a>构造模型</h3><p>继承torhc类来构造</p>
-<h3 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h3><h3 id="循环神经网络"><a href="#循环神经网络" class="headerlink" title="循环神经网络"></a>循环神经网络</h3><h3 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h3><h3 id="计算性能"><a href="#计算性能" class="headerlink" title="计算性能"></a>计算性能</h3><h3 id="计算机视觉"><a href="#计算机视觉" class="headerlink" title="计算机视觉"></a>计算机视觉</h3><h3 id="自然语言处理"><a href="#自然语言处理" class="headerlink" title="自然语言处理"></a>自然语言处理</h3>
+                <h2 id="1-摘要——最后写，反复修改"><a href="#1-摘要——最后写，反复修改" class="headerlink" title="1.摘要——最后写，反复修改"></a>1.摘要——最后写，反复修改</h2><p>摘要在整个数模论文中占有及其重要的地位，<strong>它是评委对你所写论文的第一印象，因此在这一部分的写作上一定要花大功夫，千万不能马虎，评委们通过摘要就决定是否继续阅读你的论文。换句话说，就算你的论文其他方面写得再好，摘要写的不好，你的论文也不会得到重视。摘要应该体现你用了什么方法，建立了什么模型，解决了什么问题，得出了什么结论，还可作那些推广。</strong><br>摘要包括： a.模型的数学归类（在数学上属于什么类型）；b.建模的思想（思路）；c.算法思想（求解思路）；d.建模特点（模型优点，建模思想或方法，算法特点，结果检验，灵敏度分析，模型检验…….）；e.主要结果（数值结果，结论）（回答题目所问的全部“问题”）。（摘要写作水平直接决定一二三等奖，一定要慎重）。</p>
+<h2 id="2-问题重述"><a href="#2-问题重述" class="headerlink" title="2.问题重述"></a>2.问题重述</h2><p>这一部分恐怕是数模论文里面最好写的了，当所给赛题原文太长的需要我们进行精简，在时间充裕情况下可以用自己的话进行归纳总结，将问题背景和题目分开陈述。</p>
+<h2 id="3-模型假设"><a href="#3-模型假设" class="headerlink" title="3.模型假设"></a>3.模型假设</h2><p>假设一般分为以下几类：<br>（1）题目中给出的，或者可从题目中直接确定的；<br>（2）为了简化问题，或者使模型简化，我们在后续建模过程中提出的假设。<br>假设应该紧扣模型，假设的设置直接决定了问题的简化程度，以及我们考虑的是否全面，对结果影响较小的因素都可忽略，但要在假设中说明。（无关紧要的假设，明显凑字数嫌疑的假设就不要写了，比如：假设我们所查到的数据都是正确的之类的）。</p>
+<h2 id="4-符号说明"><a href="#4-符号说明" class="headerlink" title="4.符号说明"></a>4.符号说明</h2><p>在后面建模的过程中不可避免的会出现大量的数学符号，这一部分可以在论文初稿完成后再进行整理，将论文通用的符号置于此处，不用把全部符号放在这里。<br>**注意：此处出现的符号，在后文建模过程中出现时也要及时解释；在文中仅出现一次的符号，只在后文用到的地方解释即可。<br>**</p>
+<h2 id="5-问题分析"><a href="#5-问题分析" class="headerlink" title="5.问题分析"></a>5.问题分析</h2><p>首先明确一点，问题分析不同于摘要，也是很重要的一部分。问题分析体现的是我们对题目的分析过程，解决问题的思路，对后续建模过程的想法，<strong>建议这部分在建模之前写。</strong><br>在数学建模竞赛（尤其美赛）中，问题分析有一个很重要的任务是对理解题意，题目中模糊的概念加以澄清。在明白题意之后，要对题目进行整体分析，充分利用题目中的信息和条件，确定用什么方法建立模型。<br><strong>在问题分析这部分完成之后，我们应该对整个的模型结构，论文框架都有一个大致的把握。</strong></p>
+<h2 id="6-模型建立"><a href="#6-模型建立" class="headerlink" title="6.模型建立"></a>6.模型建立</h2><p>短短三天的比赛时间，并不是要我们建立一个全新的模型，<strong>而是要在我们大量阅读相关文献的基础上做出自己的优化方案和创新点，可以在某一方面进行优化和改进，也可以将某一领域的模型应用到新的领域。在这部分要注意的地方是公式表达、简化问题、对比分析。</strong><br>数学建模竞赛的题目源于实际问题，这就需要我们将实际问题抽象成数学公式进行表达，能用公式表达的部分尽量用公式表达；我们面临的实际问题可能涉及较多的因素，我们需要做的是将其中不太重要的因素进行简化，一方面有利于模型的建立，另一方面便于问题的求解；对比也是数学建模比较重要的部分，好的模型只有相互对比才能显现效果，差的模型也只有对比才能显现其错误，所以小编建议在时间允许的情况下，一个问题可以由多个方法进行解决。<br>另外，应注意对每个模型公式的解释一定要清楚到位，其中的数学符号一定要与前面的符号说明保持一致。</p>
+<h2 id="7-模型求解"><a href="#7-模型求解" class="headerlink" title="7.模型求解"></a>7.模型求解</h2><p><strong>模型求解在国赛中是最为重要的。评委不看重结果的准确性，但是评委看重对参数、误差的讨论，如果没有求解的话，何来误差分析。所以，无论求解正确与否，我们都必须给出结果。</strong><br>一般数学建模中采用数学软件（Matlab，Maple，Mathematic等）进行求解，其中MATLAB做图是必备技能，在美赛中更为关键。另外一些专用软件也可以学习，比如说解概率统计问题的SAS、SPSS；解运筹优化问题的 Lingo等。<br>在求解算法的选择上，没有必要追求高大上的算法，在可以解决问题的前提下，模型和算法都是越简单越好，这样会给你留下充足的时间进行参数和误差的讨论分析。另外，我们也可以采用不同的方法进行求解，这样可以间接验证你所求结果的正确性。<br>模型结果表达尽量用一些漂亮美观的图表，总而言之，能用彩色图的就不用黑白图，能用三维图的就不用二维图，漂亮的图对你的论文加分不少。</p>
+<h2 id="8-结果分析"><a href="#8-结果分析" class="headerlink" title="8.结果分析"></a>8.结果分析</h2><p>在我们的模型假设中，忽略了一些对问题影响的次要因素，使问题得到了简化，但必然会产生一些误差；另外解决问题的方法是很多的，在论文中可能只用了其中的一两种方法，思维可能显得比较局限；而模型本身也会有它的优势和缺陷。因此，我们在这部分应该做的工作主要有下面三点：</p>
+<p><strong>A． 是否能用其他方式或方法解决。</strong></p>
+<p><strong>B． 模型的优缺点分析。</strong></p>
+<p><strong>C． 模型的误差分析或灵敏度分析。</strong></p>
+<h2 id="9-模型评价与推广"><a href="#9-模型评价与推广" class="headerlink" title="9.模型评价与推广"></a>9.模型评价与推广</h2><p>这部分文章又一亮点，对于整个论文的作用在于画龙点睛。另外，我们对问题的探讨与延拓方式是多种多样的：可以把假设的条件适当放宽了来考虑问题；可以对你的算法做出改进等等。</p>
+<h2 id="10-参考文献"><a href="#10-参考文献" class="headerlink" title="10.参考文献"></a>10.参考文献</h2><p>A．书籍的表述方式为： [编号] 作者，书名，出版地：出版社，出版年月。<br>B．参考文献中期刊杂志论文的表述方式为： [编号] 作者，论文名，杂志名，卷期号：起止页码，出版年。<br>C．参考文献中网上资源的表述方式为： [编号] 作者，资源标题，网址，访问时间。</p>
+
                 
             </div>
             <hr/>
@@ -554,7 +514,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://weiran1999.github.io/2020/10/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">http://weiran1999.github.io/2020/10/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</a>
+                    <a href="http://weiran1999.github.io/2020/10/27/%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/">http://weiran1999.github.io/2020/10/27/%E5%BB%BA%E6%A8%A1%E8%AE%BA%E6%96%87/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -767,10 +727,59 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/11/13/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%80%BB%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数学建模">
+                        
+                        <span class="card-title">数学建模</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%80%BB%E7%BB%93%E5%BD%92%E7%BA%B3/" class="post-category">
+                                    总结归纳
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Skill/">
+                        <span class="chip bg-color">Skill</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/10/26/%E6%A3%92%E6%89%93%EF%BC%8C%E9%B8%B3%E9%B8%AF/">
                     <div class="card-image">
                         
-                        <img src="/hit.jpg" class="responsive-img" alt="棒打，鸳鸯">
+                        <img src="/imgs/hit.jpg" class="responsive-img" alt="棒打，鸳鸯">
                         
                         <span class="card-title">棒打，鸳鸯</span>
                     </div>
@@ -782,9 +791,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -806,51 +815,6 @@
                     
                     <a href="/tags/%E5%9B%9E%E5%BF%86/">
                         <span class="chip bg-color">回忆</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/19/%E5%85%B4%E8%87%B4%E9%98%91%E7%8F%8A/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="兴致阑珊">
-                        
-                        <span class="card-title">兴致阑珊</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Weiran
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9D%82%E8%AE%B0/">
-                        <span class="chip bg-color">杂记</span>
                     </a>
                     
                 </div>
