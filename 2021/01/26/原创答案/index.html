@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="一法破万法的爬虫, WeiRan">
+    <meta name="keywords" content="原创答案, WeiRan">
     <meta name="description" content="技术 分享 心声">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>一法破万法的爬虫 | WeiRan</title>
+    <title>原创答案 | WeiRan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -276,12 +276,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">一法破万法的爬虫</h1>
+                    <h1 class="description center-align post-title">原创答案</h1>
                 </div>
             </div>
         </div>
@@ -397,16 +397,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Skill/">
-                                <span class="chip bg-color">Skill</span>
+                            <a href="/tags/%E7%A4%BE%E4%BC%9A/">
+                                <span class="chip bg-color">社会</span>
                             </a>
                         
-                            <a href="/tags/%E7%88%AC%E8%99%AB/">
-                                <span class="chip bg-color">爬虫</span>
-                            </a>
-                        
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/%E8%BD%AC%E8%87%AA/">
+                                <span class="chip bg-color">转自</span>
                             </a>
                         
                     </div>
@@ -417,8 +413,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/" class="post-category">
-                                科学技术
+                            <a href="/categories/%E4%BA%BA%E6%96%87%E6%83%85%E6%80%80/" class="post-category">
+                                人文情怀
                             </a>
                         
                     </div>
@@ -430,14 +426,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-01-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-17
+                    2021-01-26
                 </div>
                 
 
@@ -461,22 +457,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我入门神秘瑰丽的代码世界就是缘于Python，而Python之中我最先接触的技术就是爬虫。</p>
-<p>爬虫技术的迭代几乎是跟随者前端和附带的反爬构架一起的。如同网络的黑客和白客一样，矛与盾之间的攻防。</p>
-<p>但技术是无罪的，我这篇文章介绍下，我心目中，一法破万法的爬虫方法。</p>
-<p>selenium的大名在爬虫领域算是响当当的，自动化控制浏览器爬取信息，可以说是非常便捷的方式，缺点就是速度慢，但若只是用于得到cookies和一些内容稍小的必要数据，则是上上选。</p>
-<p>但树大招风，大厂的前端工程师怎会不注意你的selenium爬虫，关于selenium的反爬，是越来越严了，单纯使用selenium的简单方法，已经不太能成功爬取数据。不过，盾的技术日新月异，矛的锋利亦是如此。</p>
-<p>这里介绍一种利用selenium去接管一个自己已经打开的浏览器方式，这样可以有效避开前端网页检测到selenium而封杀爬虫。</p>
-<p>先打开终端，输入</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Google\ Chrome --remote-debugging-port=9222 --user-data-dir=&quot;~/ChromeProfile&quot;</span><br></pre></td></tr></table></figure>
-<p>这是在自己计算机里新建一个存放新环境的文件夹，并映射到浏览器中。</p>
-<p>需要自己找到电脑里安装webDriver的路径地址。<br>然后在自己的爬虫文件里，导入以下设置：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver <span class="keyword">import</span> ActionChains</span><br><span class="line">options = webdriver.ChromeOptions() <span class="comment">#我用的是Chrome浏览器</span></span><br><span class="line">options.add_experimental_option(<span class="string">&quot;debuggerAddress&quot;</span>, <span class="string">&quot;127.0.0.1:9222&quot;</span>)</span><br><span class="line"><span class="comment"># options.add_experimental_option(&#x27;excludeSwitches&#x27;, [&#x27;enable-automation&#x27;]) #注释后可以不报错</span></span><br><span class="line">chromedriver_path = <span class="string">&quot;/usr/local/bin/chromedriver&quot;</span> <span class="comment">#安装你的webdriver的驱动路径</span></span><br><span class="line">browser = webdriver.Chrome(executable_path=chromedriver_path, options=options)</span><br><span class="line">url=<span class="string">&#x27;&#x27;</span></span><br><span class="line">browser.get(url)</span><br></pre></td></tr></table></figure>
-<p>然后就可以欢快的爬取内容了。</p>
-<p>比如写入cookies，然后自己再用其他常规爬虫方式去爬取数据，这样就规避了selenium效率慢的问题。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#写入cookies</span></span><br><span class="line">cookies = &#123;&#125;</span><br><span class="line">cks = browser.get_cookies()</span><br><span class="line"><span class="keyword">for</span> ck <span class="keyword">in</span> cks:</span><br><span class="line">    cookies[ck[<span class="string">&#x27;name&#x27;</span>]] = ck[<span class="string">&#x27;value&#x27;</span>]</span><br><span class="line">ck1 = json.dumps(cookies)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;ck.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f :</span><br><span class="line">    f.write(ck1)</span><br><span class="line"></span><br><span class="line">print(browser.page_source) <span class="comment">#爬取网页源代码</span></span><br></pre></td></tr></table></figure>
-
-
+                <p>过去的人，在农业社会大多数人都被生存问题困住了，既不会去考虑其他问题，也不知道这个世界上还有更理想的生活可以选择。所以不会表达自己的不满。一直到最近几十年，教育普及，现代媒体工具渗透到所有社区，一部分年轻人通过教育，快速改变了自己的生活。其余的大部分年轻人才出现了不满情绪。他们不满，不是因为失去了什么东西。而是开始期待自己和父辈从未得到过的东西。社会越是进步，提供的机会越多，不满就越强烈。因为无论如何都不可能，所有人都实现阶层上升。19世纪的欧洲文学、20世纪初的美国文学都在表达这种情绪。现在咱们中国也走到了类似的历史阶段了。另外中国和其他国家发展方式还有点不一样，在工业化爆发阶段，欧洲有殖民地，美国、俄国有足够的人均土地和资源，日本有清朝的战争赔款，只有中国什么都没有，只有自身庞大人口积累的资源。</p>
+<p>所以我们国家过去几十年里，最成功的发展经验就是超前教育，培养性价比最高的劳动力，当大多数人都是农民的时候要大力普及小学教育。当只有四分之一年轻人能当工人的时候，要普及中学教育。当只有一千多万白领职位的时候，要搞大学扩招，每年要制造几百万大学生。这样做最大的好处就是，确保最先进的部门能在最大范围内，挑选人才迅速扩张。体面的工作总量是明显增加的。但从学生的视角来看，就是学长的上升空间肯定比自己的大。学长可以直接拿到的职位，自己经过激烈竞争才能拿到手，按照购买力的工资可能还在下降，必然会有怨气。但是如果教育不扩张，大多数人可能连抱怨的机会都没有。</p>
+<p>我们社会在这个历史节点遇到了很多问题，但我们不能往后看，不能企图在历史上找一个模板。找一个天堂来解决现在的问题。过去几十年，中国完成了现代化、工业化。基层文化基本转向互联网。我们这一代年轻人是第一代完全生长在工业社会的年轻人，也是第一代互联网原住民，潜意思里，我们年轻人都知道曾经的经验不管用了，需要我们自己寻找方案，抛弃历史上所有的权威，来解决前所未有的问题。</p>
+<p>但抛弃权威是一个非常痛苦的过程。尼采说，上帝死了。虽然表达是人类思想的解放，但没有人会说这是一种乐观的哲学。年轻人必须意识到必须自己来制定社会方案，没有人可以依靠的时候，往往会有惶恐甚至于绝望的情绪，这也能用来解释一部分年轻人对于社会现象的低落情绪。我们不满足现在的资本规律，但上一次革命的创造力，不足以解决当下的问题了。</p>
+<p>苏联之所以解体就是因为，其本身社会建设水平无法应对自己创造的工业化社会，一旦完成工业化，苏联领导人自己都不知道发展方向。<br>自古败军之将，不可言勇。我们无法从苏联的历史经验中去寻求正确的、属于我们的答案。我们自己创造的这个工业化社会，每年生产10亿吨钢铁，这对比其他工业化社会，这不仅仅是量变，而是质变。只有这样一个全面工业化，而且快速进步的社会，才会有年轻人对宏观趋势表示乐观，同时又对具体的问题表示不满。这样说来，我们既不会说现在的社会很完美，而是要说，现在的问题要结合当下的社会生产力来考虑。前面几千年来的年轻人过得都不怎么样，不是说我们该安于现状，而是说我们该去寻找自己的原创答案，而不是去在历史上抄答案。做原创答案的过程很痛苦，也许会暂时增加压力，但我们没有别的选择。</p>
+<p>转自<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cp4y1x7ia">【睡前消息219】打工人不想猝死，就要比拼多多更快</a></p>
 
                 
             </div>
@@ -503,7 +489,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/01/17/%E4%B8%80%E6%B3%95%E7%A0%B4%E4%B8%87%E6%B3%95%E7%9A%84%E7%88%AC%E8%99%AB/">http://example.com/2021/01/17/%E4%B8%80%E6%B3%95%E7%A0%B4%E4%B8%87%E6%B3%95%E7%9A%84%E7%88%AC%E8%99%AB/</a>
+                    <a href="http://example.com/2021/01/26/%E5%8E%9F%E5%88%9B%E7%AD%94%E6%A1%88/">http://example.com/2021/01/26/%E5%8E%9F%E5%88%9B%E7%AD%94%E6%A1%88/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,16 +527,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Skill/">
-                                    <span class="chip bg-color">Skill</span>
+                                <a href="/tags/%E7%A4%BE%E4%BC%9A/">
+                                    <span class="chip bg-color">社会</span>
                                 </a>
                             
-                                <a href="/tags/%E7%88%AC%E8%99%AB/">
-                                    <span class="chip bg-color">爬虫</span>
-                                </a>
-                            
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/%E8%BD%AC%E8%87%AA/">
+                                    <span class="chip bg-color">转自</span>
                                 </a>
                             
                         </div>
@@ -720,9 +702,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/01/26/%E5%8E%9F%E5%88%9B%E7%AD%94%E6%A1%88/">
                     <div class="card-image">
@@ -740,9 +723,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -755,6 +738,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -777,30 +761,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/12/%E5%B9%B4%E5%B0%91%E8%B0%81%E4%B8%8D%E7%88%B1%E7%8B%82%E4%BA%BA/">
+                <a href="/2021/01/17/%E4%B8%80%E6%B3%95%E7%A0%B4%E4%B8%87%E6%B3%95%E7%9A%84%E7%88%AC%E8%99%AB/">
                     <div class="card-image">
                         
-                        <img src="https://s3.ax1x.com/2021/01/12/sGHLhq.png" class="responsive-img" alt="年少谁不爱狂人">
                         
-                        <span class="card-title">年少谁不爱狂人</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="一法破万法的爬虫">
+                        
+                        <span class="card-title">一法破万法的爬虫</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            人不轻狂枉少年
+                            selenium接管浏览器
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BA%BA%E6%96%87%E6%83%85%E6%80%80/" class="post-category">
-                                    人文情怀
+                            <a href="/categories/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    科学技术
                                 </a>
                             
                             
@@ -810,20 +795,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%81%B6%E5%83%8F/">
-                        <span class="chip bg-color">偶像</span>
+                    <a href="/tags/Skill/">
+                        <span class="chip bg-color">Skill</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%BA%E7%89%A9/">
-                        <span class="chip bg-color">人物</span>
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%BA%E7%94%9F/">
-                        <span class="chip bg-color">人生</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%9E%E5%BF%86/">
-                        <span class="chip bg-color">回忆</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
