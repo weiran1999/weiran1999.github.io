@@ -33,16 +33,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -63,7 +53,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a target="_blank" rel="noopener" href="http://weiran1999.github.io" class="waves-effect waves-light">
+    <a href="https://weiran1999.github.io" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -144,7 +134,7 @@
         
         <li class="m-nav-item">
 	  
-		<a target="_blank" rel="noopener" href="http://weiran1999.github.io" class="waves-effect waves-light">
+		<a href="https://weiran1999.github.io" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -330,20 +320,20 @@
                 
                 
                 
-                <a href="/categories/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/" title="科学技术: 1">
+                <a href="/categories/%E4%BA%BA%E6%96%87%E6%83%85%E6%80%80/" title="人文情怀: 9">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">科学技术
-                        <span class="tag-length">1</span>
+                            style="background-color: #F9EBEA;">人文情怀
+                        <span class="tag-length">9</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E4%BA%BA%E6%96%87%E6%83%85%E6%80%80/" title="人文情怀: 9">
+                <a href="/categories/%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/" title="科学技术: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">人文情怀
-                        <span class="tag-length">9</span>
+                            style="background-color: #F5EEF8;">科学技术
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -399,7 +389,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"科学技术","max":10},{"name":"人文情怀","max":10},{"name":"总结归纳","max":10}],
+            indicator: [{"name":"人文情怀","max":10},{"name":"科学技术","max":10},{"name":"总结归纳","max":10}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -410,7 +400,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,9,2],
+                    value : [9,1,2],
                     name : '文章分类数量'
                 }
             ]
@@ -481,13 +471,13 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2020-2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2020</span>
             <a href="/about" target="_blank">WeiRan</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -510,6 +500,50 @@
             </span>
             
             <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "2";
+                    var startDate = "20";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
             
             <br>
             
